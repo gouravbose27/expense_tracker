@@ -116,6 +116,8 @@ const usernameForm = document.getElementById('username-form');
 usernameForm.addEventListener('submit', event => {
   event.preventDefault();
   usernameForm.classList.add('was-validated');
+  document.getElementById('username-success')
+    .classList.toggle('d-none', !usernameForm.checkValidity());
 });
 
 // Chart is built on tab show because a hidden canvas has zero size.
